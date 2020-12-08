@@ -75,7 +75,22 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p>{{predictResult}}</p>
+                    <h5 class = "font-weight-bold">VGG model Result</h5>
+                    <p class = "">result = {{predictResult.vgg_result}}</p>
+                    <p class = "">VGG holy prop = {{predictResult.vgg_holy_prop}}</p>
+                    <p class = "">VGG sweet prop = {{predictResult.vgg_sweet_prop}}</p>
+                    <p class = "">VGG lemon prop = {{predictResult.vgg_lemon_prop}}</p>
+                    <h5 class = "font-weight-bold">VGG with Finetune model Result</h5>
+                    <p class = "">result = {{predictResult.vggfine_result}}</p>
+                    <p class = "">VGG_Finetune holy prop = {{predictResult.vggfine_holy_prop}}</p>
+                    <p class = "">VGG_Finetune sweet prop = {{predictResult.vggfine_sweet_prop}}</p>
+                    <p class = "">VGG_Finetune lemon prop = {{predictResult.vggfine_lemon_prop}}</p>
+                    <h5 class = "font-weight-bold">Self-define model Result</h5>
+                    <p class = "">result = {{predictResult.lap_resul}}</p>
+                    <p class = "">Self-define holy prop = {{predictResult.lap_holy_result}}</p>
+                    <p class = "">Self-define sweet prop = {{predictResult.lap_sweet_result}}</p>
+                    <p class = "">Self-define lemon prop = {{predictResult.lap_lemon_result}}</p>
+
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-primary" @click="showModal = false">Close</button>
@@ -107,7 +122,7 @@ export default {
       status: "",
       showAlert: false,
       showModal: false,
-      predictResult: "( put result here. )",
+      predictResult: "",
     };
   },
   methods: {
@@ -159,6 +174,7 @@ export default {
         })
           .then(function(response) {
             //handle success
+            this.predictResult = response
             this.showModal = true;
             console.log(this.showModal);
             console.log(response);
