@@ -50,8 +50,7 @@
 
 
     <div class="alert alert-warning alert-dismissible fade show" role="alert" v-if="showAlert">
-      <strong>Holy guacamole!</strong> You should check in on some of those
-      fields below.
+      <strong>WARNNING!</strong> Please select image.
       <button
         type="button"
         class="close"
