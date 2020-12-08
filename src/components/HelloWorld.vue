@@ -26,15 +26,17 @@
           Select Image
         </button>
       </div>
+
       <button
         id="myBtn"
         type="button"
-        class="btn btn-outline-success m-3"
+        class="btn btn-success mt-3 mb-5 mx-5"
         v-if="imageData.length > 0"
         @click="predict()"
       >
         Predict
       </button>
+
     </div>
     <input
       type="file"
