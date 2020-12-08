@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-    <div class="mb-5">
-      <h1 class="card-title font-weight-bold">
+    <div class="card text-center">
+
+      <h1 class="card-title font-weight-bold mt-5 mb-5">
         Basil Classification
       </h1>
+
     </div>
     <div class="component card mb-3">
       <img
